@@ -1,0 +1,16 @@
+{
+  "name": "TEDUH: pendamping perawatan luka kanker di rumah",
+  "short_name": "TEDUH",
+  "description": "Prototipe aplikasi pendamping keluarga dan perawat untuk merawat luka kanker di rumah.",
+  "lang": "id",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#EAF1ED",
+  "theme_color": "#12372F",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

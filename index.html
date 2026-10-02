@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#12372F">
+  <meta name="description" content="Prototipe TEDUH: pendamping perawatan luka kanker di rumah untuk keluarga dan perawat">
+  <title>TEDUH | Prototipe</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Literata:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="stage">
+    <aside class="demo-panel" id="demoPanel" aria-label="Panel demo prototipe">
+      <div class="demo-brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11c0-4.5 4-7.5 9-7.5s9 3 9 7.5c-3-1.5-6-2.2-9-2.2S6 9.5 3 11z"/><path d="M12 13c-2 2.5-3 4-3 5.5a3 3 0 0 0 6 0c0-1.5-1-3-3-5.5z"/></svg>
+        </span>
+        <div>
+          <h1>TEDUH</h1>
+          <p>Pendamping perawatan luka kanker di rumah</p>
+        </div>
+      </div>
+      <p class="demo-note">Prototipe untuk Lomba Esai WOUNDFEST 2026. Semua data adalah contoh dan pengukuran luka oleh AI disimulasikan.</p>
+
+      <section class="demo-group">
+        <h2>Lihat sebagai</h2>
+        <div class="seg" role="group" aria-label="Pilih peran">
+          <button type="button" data-role="keluarga" class="is-on">Keluarga</button>
+          <button type="button" data-role="perawat">Perawat</button>
+        </div>
+      </section>
+
+      <section class="demo-group">
+        <h2>Lompat ke layar</h2>
+        <div class="jump" id="jumpList"></div>
+      </section>
+
+      <section class="demo-group">
+        <h2>Simulasikan hasil cek</h2>
+        <div class="sim">
+          <button type="button" data-sim="hijau" class="sim-btn s-hijau">Hijau</button>
+          <button type="button" data-sim="kuning" class="sim-btn s-kuning">Kuning</button>
+          <button type="button" data-sim="merah" class="sim-btn s-merah">Merah</button>
+        </div>
+        <p class="demo-hint">Hasil langsung muncul di layar keluarga dan masuk ke dasbor perawat.</p>
+      </section>
+
+      <section class="demo-group">
+        <button type="button" class="reset-btn" id="resetDemo">Reset data demo</button>
+      </section>
+    </aside>
+
+    <div class="scrim" id="scrim" hidden></div>
+
+    <main class="device">
+      <button type="button" class="demo-toggle" id="demoToggle" aria-controls="demoPanel" aria-expanded="false">Panel demo</button>
+      <div class="phone" id="phone">
+        <div class="statusbar" aria-hidden="true">
+          <span class="clock">09.41</span>
+          <span class="island"></span>
+          <span class="sig">
+            <svg viewBox="0 0 20 12" width="18" height="11" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="2" width="3" height="10" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg>
+          </span>
+        </div>
+        <div class="app" id="app"></div>
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
